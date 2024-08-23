@@ -83,7 +83,7 @@ echo "direct_osx = np.array([" >> $filename
 for (( n=6; n<15; n++ ))
 do
     result=$(echo "2^($n)" | bc)
-    repeat=$(echo "2^(20-$n)" | bc)
+    repeat=$(echo "2^(26-$n)" | bc)
     output=$(l2c -N$result -d6 -r$repeat -v0)
     number=$(echo "$output" | awk '{print $10}')
     echo "[$result, $number]," >> $filename
@@ -93,15 +93,15 @@ echo "])" >> $filename
 else 
 cat << EOF >> $filename
 direct_osx = np.array([
-[64, 2.9100e-07],
-[128, 9.1600e-07],
-[256, 2.9160e-06],
-[512, 9.7500e-06],
+[64, 1.2500e-07],
+[128, 5.8300e-07],
+[256, 2.2080e-06],
+[512, 9.1660e-06],
 [1024, 3.6750e-05],
-[2048, 1.4979e-04],
-[4096, 5.8996e-04],
-[8192, 2.9732e-03],
-[16384, 1.4975e-02]
+[2048, 1.4263e-04],
+[4096, 5.6229e-04],
+[8192, 2.7921e-03],
+[16384, 1.4820e-02],
 ])
 EOF
 fi
