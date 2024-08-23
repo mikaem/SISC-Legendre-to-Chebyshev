@@ -1,6 +1,10 @@
 [![L2C-CI](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/actions/workflows/l2c.yml/badge.svg)](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/actions/workflows/l2c.yml)
 
-This repository contains supplemenatry material for the paper [A faster Legendre-to-Chebyshev transform](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/blob/main/FMM_paper.pdf). The paper describes a Fast Multipole Method similar to (but not exactly like) the one described in
+This repository contains supplemenatry material for the paper 
+
+  * [A Faster Multipole Legendre-Chebyshev transform](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/blob/main/FMM_paper.pdf), by Mikael Mortensen
+
+submitted for publication in [SISC](https://www.siam.org/publications/siam-journals/siam-journal-on-scientific-computing/). The paper describes a Fast Multipole Method similar to (but not exactly like) the one described in
 
   * B. K. Alpert and V. Rokhlin, A fast algorithm for the evaluation of legendre expansions, 389 SIAM Journal on Scientific and Statistical Computing, 12 (1991), pp. 158–179, https://doi.390org/10.1137/0912009.391
 
@@ -33,7 +37,7 @@ Note that the instructions above assume that all dependencies are found. For the
 
 ## Conda installation
 
-For installation using Conda see `l2cacc.yml` and `l2copenblas.yml` for two different environments that both work on the MacBook Pro M3. The first `l2cacc.yml` makes use of the Accelerate framework and native compilers. The `l2copenblas.yml` is more generic and pulls in everything from Conda, including compilers and OpenBlas. Note that at the time of writing only the OpenBlas environment can take advantage of multithreading on the Mac because the Accelerate framework is still not set up to use multi-threading with Blas. This should become available in version 15 of the Mac OS. You can set up any of the environment using conda env --create, like
+For installation using Conda see `l2cacc.yml` and `l2copenblas.yml` for two different environments that both work on the MacBook Pro M3. The first `l2cacc.yml` makes use of the Accelerate framework and native compilers. The `l2copenblas.yml` is more generic and pulls in everything from Conda, including compilers and OpenBlas. Note that at the time of writing only the OpenBlas environment can take advantage of multithreading on the Mac because the Accelerate framework is still not set up to use multi-threading with Blas. This should become available in version 15 of the Mac OS. You can set up any of the environments using conda env --create, like
 
     conda env --create -f l2copenblas.yml
     conda activate l2copenblas
