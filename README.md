@@ -37,7 +37,7 @@ Note that the instructions above assume that all dependencies are found. For the
 
 ## Conda installation
 
-For installation using Conda see `l2cacc.yml` and `l2copenblas.yml` for two different environments that both work on the MacBook Pro M3. The first `l2cacc.yml` makes use of the Accelerate framework and native compilers. The `l2copenblas.yml` is more generic and pulls in everything from Conda, including compilers and OpenBlas. Note that at the time of writing only the OpenBlas environment can take advantage of multithreading on the Mac because the Accelerate framework is still not set up to use multi-threading with Blas. This should become available in version 15 of the Mac OS. You can set up any of the environments using conda env --create, like
+For installation using Conda see `l2cacc.yml` and `l2copenblas.yml` for two different environments that both work on the MacBook Pro M3. The first `l2cacc.yml` makes use of the Accelerate framework and native compilers. The `l2copenblas.yml` is more generic (should work on most unix computers) and pulls in everything from Conda, including compilers and OpenBlas. Note that at the time of writing only the OpenBlas environment can take advantage of multithreading on the Mac because the Accelerate framework is still not set up to use multi-threading with Blas. This should become available in version 15 of the Mac OS. You can set up any of the environments using conda env --create, like
 
     conda env --create -f l2copenblas.yml
     conda activate l2copenblas
@@ -55,7 +55,7 @@ and you should then be ready to run the l2c executable, for example
 
 to run a L2C followed by a C2L, checking for accuracy.
 
-Se also the [github actions setup](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/blob/main/.github/workflows/l2c.yml), which installs the `l2copenblas` environment and does all necessary steps to install and test the code.
+Se also the [github actions setup](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/blob/main/.github/workflows/l2c.yml), which installs the `l2copenblas` environment on both Mac and linux and does all necessary steps to install and test the code.
 
 # Codespace
 Another simple way to test this code is to create a codespace. The `l2copenblas.yml` file in the root folder will then make sure that the codespace creates a conda environment with all necessary dependencies, including OpenBlas and FFTW, already installed. Just press the codespace button and wait awhile for the environment to build. Then enable the environment and run some tests or test the executable `l2c`. In the terminal of the codespace you can for example recreate all figures and table in the [paper](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/blob/main/FMM_paper.pdf):
