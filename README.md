@@ -1,14 +1,10 @@
 # Legendre-to-Chebyshev
 
-[![L2C-CI](https://github.com/spectralDNS/Legendre-to-Chebyshev/actions/workflows/l2c.yml/badge.svg)](https://github.com/spectralDNS/Legendre-to-Chebyshev/actions/workflows/l2c.yml)
+[![L2C-CI](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/actions/workflows/l2c.yml/badge.svg)](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/actions/workflows/l2c.yml)
 
-Routines for Legendre to Chebyshev (and inverse) transforms.
-
-This is first and foremost the implementation of a Fast Multipole Method similar to (but not exactly like) the one described in
+This repository contains supplemenatry material for the paper [A faster Legendre-to-Chebyshev transform](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/blob/main/FMM_paper.pdf). The paper describes a Fast Multipole Method similar to (but not exactly like) the one described in
 
   * B. K. Alpert and V. Rokhlin, A fast algorithm for the evaluation of legendre expansions, 389 SIAM Journal on Scientific and Statistical Computing, 12 (1991), pp. 158–179, https://doi.390org/10.1137/0912009.391
-
-The implemented method is described in the preprint [A faster Legendre-to-Chebyshev transform](https://github.com/spectralDNS/Legendre-to-Chebyshev/blob/main/FMM_paper.pdf).
 
 There are several implementations in the src directory:
   * python - A short, vectorized Python implementation
@@ -54,7 +50,7 @@ and you should then be ready to run the l2c executable, for example
 
 to run a L2C followed by a C2L, checking for accuracy.
 
-Se also the [github actions setup](https://github.com/spectralDNS/Legendre-to-Chebyshev/blob/main/.github/workflows/l2c.yml), which installs the `l2copenblas` environment and does all necessary steps to install and test the code.
+Se also the [github actions setup](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/blob/main/.github/workflows/l2c.yml), which installs the `l2copenblas` environment and does all necessary steps to install and test the code.
 
 # Codespace
 Another simple way to test this code is to create a codespace. The l2copenblas.yml file in the root folder will then make sure that the codespace creates a conda environment with all necessary dependencies, including OpenBlas and FFTW, already installed. Just press the codespace button and wait awhile for the environment to build. Then enable the environment and run some tests or test the executable `l2c`
