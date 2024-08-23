@@ -1,5 +1,3 @@
-# Legendre-to-Chebyshev
-
 [![L2C-CI](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/actions/workflows/l2c.yml/badge.svg)](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/actions/workflows/l2c.yml)
 
 This repository contains supplemenatry material for the paper [A faster Legendre-to-Chebyshev transform](https://github.com/mikaem/SISC-Legendre-to-Chebyshev/blob/main/FMM_paper.pdf). The paper describes a Fast Multipole Method similar to (but not exactly like) the one described in
