@@ -1,0 +1,24 @@
+name: l2cacc
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - pip
+  - numpy
+  - cython
+  - fftw
+  - meson
+  - ninja
+  - pkg-config
+  - mpmath
+  - boost
+  - mpi4py-fft
+  - pytest
+  - scipy
+  - numba
+  - sympy
+
+variables:
+  USE_ACCELERATE : "1"
