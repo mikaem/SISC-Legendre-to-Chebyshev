@@ -13,7 +13,7 @@ There are several implementations in the src directory:
 
 In addition there is
   * bin - An executable l2c that can run various tests
-  * results - Bash and Python files that can be used to recreate the figures in the paper above. They have obvious names, like table1.py. Note that the bash-files have precomputed data included and if you want to recompute something, then you need to open these files and modify at the top. For example, modify `rerun_fmm="no"` to `rerun_fmm="yes"` in order to rerun the results for the faster multipole method described in the paper.
+  * results - Bash and Python files that can be used to recreate the figures in the paper above. They have obvious names, like `table1.py`. Note that the bash-files have precomputed data included and if you want to recompute something on a local machine, then you need to open these files and modify at the top. For example, modify `rerun_fmm="no"` to `rerun_fmm="yes"` in order to rerun the results for the faster multipole method described in the paper. See below for installing the software.
 
 # Installation
 The code is set up to be compiled with the [meson](https://mesonbuild.com) build system. If all dependencies are easily found, then it should work by cloning this repository and then
