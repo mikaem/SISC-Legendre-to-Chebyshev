@@ -1,3 +1,0 @@
-fftw3
-openblas
-cython
