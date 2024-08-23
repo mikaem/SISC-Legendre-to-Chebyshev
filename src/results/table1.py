@@ -21,4 +21,3 @@ for n in range(1, 9):
 la += "\\hline \n"
 la += "\\end{tabular}"
 print(la)
-

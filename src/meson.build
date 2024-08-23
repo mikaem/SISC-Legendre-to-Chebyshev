@@ -36,12 +36,10 @@ endif
 
 subdir('C')
 subdir('cython')
-subdir('ctypes')
 subdir('bin')
 subdir('python')
 subdir('multiprec/python')
 subdir('multiprec/C++')
-#subdir('threads')
 
 pkg_mod = import('pkgconfig')
 pkg_mod.generate(libraries : l2clib,
