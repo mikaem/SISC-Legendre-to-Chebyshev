@@ -37,7 +37,7 @@ Note that the instructions above assume that all dependencies are found. For the
 
 ## Conda installation
 
-For installation using Conda see `l2cacc.yml` and `l2copenblas.yml` for two different environments that both work on the MacBook Pro M3. The first `l2cacc.yml` makes use of the Accelerate framework and native compilers. The `l2copenblas.yml` is more generic and pulls in everything from Conda, including compilers and OpenBlas. Note that at the time of writing only the OpenBlas environment can take advantage of multithreading on the Mac because the Accelerate framework is still not set up to use multi-threading with Blas. This should become available in version 15 of the Mac OS. You can set up any of the environments using conda env --create, like
+For installation using Conda see `l2cacc.yml` and `l2copenblas.yml` for two different environments that both work on the MacBook Pro M3. The first `l2cacc.yml` makes use of the Accelerate framework and native compilers. The `l2copenblas.yml` is more generic (should work on most unix computers) and pulls in everything from Conda, including compilers and OpenBlas. Note that at the time of writing only the OpenBlas environment can take advantage of multithreading on the Mac because the Accelerate framework is still not set up to use multi-threading with Blas. This should become available in version 15 of the Mac OS. You can set up any of the environments using conda env --create, like
 
     conda env --create -f l2copenblas.yml
     conda activate l2copenblas
